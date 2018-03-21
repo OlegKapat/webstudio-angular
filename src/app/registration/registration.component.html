@@ -1,0 +1,15 @@
+<div class="container">
+  <form novalidete [formGroup]='loginForm' (ngSubmit)='onSubmit(loginForm)'>
+    <div class="form-group">
+      <label for="login">Login</label>
+      <input type="text" class="form-control" id="login" required formControlName="login"/>
+      <div *ngIf="formErrors.name" class="alert alert-danger">{{formErrors.name}}</div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" class="form-control" type="password" required formControlName="password">
+      <div *ngIf="formErrors.password" class="alert alert-danger">{{formErrors.password}}</div>
+    </div>
+      <button class="btn btn-default" type="submit" [disables]="!loginForm.valid">Submit</button>
+  </form>
+</div>

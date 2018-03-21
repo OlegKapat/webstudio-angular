@@ -1,0 +1,134 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: visible;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+  }
+  
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+  }
+  
+  .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+  }
+  
+  /* The styling for the static div. */
+  .static {
+    background-color:  rgba(243, 36, 36,0.3);
+    clear: both;
+  }
+  
+  /* Sets the actual background images to adorable kitties. This part is crucial. */
+  .bg1::after {
+    background-image: url('/assets/images/clouds-2517653_1920.jpg');
+  }
+  
+  .bg2::after {
+    background-image: url('/assets/images/hong-kong-1990268_1920.jpg');
+  }
+  .bg3::after {
+    background-image: url('/assets/images/new-york-2699520_1920.jpg');
+  }
+  .slogan h1{
+    text-align: center;
+    text-shadow:-1px -1px 3px #7F806E;
+    color: #fff;
+    font-size:40px;
+  }
+  pre{
+    text-align: center;
+    color:#fff;
+    text-shadow:-1px -1px 3px #7F806E;
+  }
+  
+  .fa.fa-eye,.fa-bullseye,.fa-life-ring,.fa-adn,.fa-gg-circle{
+    border-radius: 50%;
+    background:rgb(243, 36, 36);
+  }
+  .fa.fa-globe{
+    border-radius: 50%;
+    background:rgb(243, 36, 36);
+  }
+  .fa-globe:hover{
+    background: #EA6212;
+  }
+  .fa-futbol-o:hover{
+    background: #EA6212;
+  }
+  .fa-bullseye:hover{
+    background: #EA6212;
+  }
+  .fa-life-ring:hover{
+    background: #EA6212;
+  }
+  .fa-gg-circle:hover{
+    background: #EA6212;
+  }
+  .fa-adn:hover{
+    background: #EA6212;
+  }
+  .fa-eye:hover{
+    background: #EA6212;
+  }
+  .fa.fa-home:hover{
+    background: #EA6212;
+  }
+ 
+ .fadeInLeft{
+  clear: both;
+  position: relative;
+  float: left;
+ }
+ .fadeInLeft span {
+   float: left;
+   margin-right: 20px;
+   text-align: left;
+ }
+ .fadeInLeft p{
+   text-align: right;
+   font-size: 16px;
+   text-align: left;
+ }
+ .section h1{
+   text-align: center;
+   margin-bottom: 30px;
+   text-shadow:-1px -1px 3px #7F806E;
+ }
+ 
+ .bg3 h1{
+   text-align: center;
+   margin-top: 20px;
+ }
+ 
