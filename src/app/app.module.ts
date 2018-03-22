@@ -15,6 +15,8 @@ import { ParallaxComponent } from './parallax/parallax.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { EmailComponent } from './email/email.component';
 import { TotalskillComponent } from './skills/totalskill/totalskill.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+
 
 
 
@@ -29,6 +31,7 @@ import { TotalskillComponent } from './skills/totalskill/totalskill.component';
     RegistrationComponent,
     EmailComponent,
     TotalskillComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
