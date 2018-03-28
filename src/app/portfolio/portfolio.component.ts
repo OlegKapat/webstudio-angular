@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {IsotopComponent } from './isotop/isotop.component';
 
 @Component({
   selector: 'app-portfolio',

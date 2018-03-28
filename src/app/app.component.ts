@@ -3,6 +3,7 @@ import { NgClass } from '@angular/common';
 import {Component, ViewChild} from '@angular/core';
 import {MenucomponentComponent } from './menucomponent/menucomponent.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+declare var Isotope: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

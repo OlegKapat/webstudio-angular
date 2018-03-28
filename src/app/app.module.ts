@@ -16,6 +16,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { EmailComponent } from './email/email.component';
 import { TotalskillComponent } from './skills/totalskill/totalskill.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { IsotopComponent } from './portfolio/isotop/isotop.component';
+import { TeamComponent } from './team/team.component';
+
+
 
 
 
@@ -32,6 +36,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     EmailComponent,
     TotalskillComponent,
     PortfolioComponent,
+    IsotopComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    AngularFontAwesomeModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
