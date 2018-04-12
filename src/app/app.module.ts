@@ -18,10 +18,10 @@ import { TotalskillComponent } from './skills/totalskill/totalskill.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { IsotopComponent } from './portfolio/isotop/isotop.component';
 import { TeamComponent } from './team/team.component';
-
-
-
-
+import { OurserviceComponent } from './ourservice/ourservice.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
+import { OrderComponent } from './ourservice/order/order.component';
 
 
 @NgModule({
@@ -37,7 +37,12 @@ import { TeamComponent } from './team/team.component';
     TotalskillComponent,
     PortfolioComponent,
     IsotopComponent,
-    TeamComponent
+    TeamComponent,
+    OurserviceComponent,
+    BlogComponent,
+    ContactComponent,
+    OrderComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import { TeamComponent } from './team/team.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

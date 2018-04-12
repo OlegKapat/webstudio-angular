@@ -9,4 +9,6 @@ img{
 .joomla,.angular,.html{
     display: inline-flex;
     margin: 10px 10px 10px 40px;
+    border:2px solid black;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }

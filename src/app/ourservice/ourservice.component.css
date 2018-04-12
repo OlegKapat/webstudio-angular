@@ -1,0 +1,11 @@
+li{
+list-style-type: none;
+text-align: left;
+margin-left: 110px;
+}
+h1,p{
+    margin-left: 10px;
+}
+.col-lg-4{
+    margin-left: 0px;
+}
