@@ -1,12 +1,15 @@
 
 <ul>
-  <li><a href="#">About us</a></li>
-  <li><a href="/app-totalskill"  routerLinkActive="active">Skills</a></li>
-  <li><a href="/app-portfolio" routerLinkActive="active">Portfolio</a></li>
-  <li><a href="/app-team" routerLinkActive="active">Out team</a></li>
-  <li><a href="/app-ourservice" routerLinkActive="active">Service</a></li>
-  <li><a href="/app-blog" routerLinkActive="active">Blog</a></li>
-  <li><a href="/app-contact" routerLinkActive="active">Contact us</a></li>
+  <li><a routerLink="/app-parallax" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About us</a></li>
+  <li><a routerLink="/app-totalskill" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Skills</a></li>
+  <li><a routerLink="/app-portfolio" routerLinkActive="active" [routerLinkActiveOptions]='{exact:true}'>Portfolio</a></li>
+  <li><a routerLink="/app-team" routerLinkActive='active' [routerLinkActiveOptions]='{exact:true}'>Out team</a></li>
+  <li><a routerLink="/app-ourservice" routerLinkActive='active' [routerLinkActiveOptions]='{exact:true}'>Service</a></li>
+  <li><a routerLink="/app-blog" routerLinkActive='active' [routerLinkActiveOptions]='{exact:true}'>Blog</a></li>
+  <li><a routerLink="/app-contact" routerLinkActive='active' [routerLinkActiveOptions]='{exact:true}'> Contact us</a></li>
+  
 
+
+<!--<li *ngFor='let n of list' (click)='select(n)' [ngClass]='{active:isActive(n)}'><a>{{n}}</a></li>-->
 </ul>
 

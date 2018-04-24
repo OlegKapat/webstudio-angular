@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menucomponent.component.css']
 })
 export class MenucomponentComponent implements OnInit {
-
-  constructor() { }
-
+  wasClicked = false;
+  constructor() { 
+   
+  }
+  onClick() {
+      this.wasClicked= !this.wasClicked;
+  }
   ngOnInit() {
   }
 

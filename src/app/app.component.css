@@ -31,8 +31,8 @@
    .hamburger:hover{
      transform: rotate(90deg);
      transition: all 0.5s linear;
+     
    }
-   
   .hamburger span::before,
   .hamburger span::after {
     display: block;

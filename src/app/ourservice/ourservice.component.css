@@ -9,3 +9,12 @@ h1,p{
 .col-lg-4{
     margin-left: 0px;
 }
+.ourservice{
+    text-align: center;
+    background-color: rgb(247, 243, 243);
+    width:auto;
+    height: 100px;
+}
+.section-description{
+    margin: 20px 0 30px 30px;
+}

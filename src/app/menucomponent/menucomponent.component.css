@@ -43,5 +43,13 @@
     margin-left: 50px;
 
   }
+  li a:hover{
+    border-bottom: 5px solid white;
+  }
+ li a.active{
+    border-bottom: 5px solid white;
+    
+
+  }
   
   

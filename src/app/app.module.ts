@@ -22,6 +22,9 @@ import { OurserviceComponent } from './ourservice/ourservice.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './ourservice/order/order.component';
+import { AgmCoreModule } from '@agm/core';
+import { ContactformComponent } from './contact/contactform/contactform.component';
+import {AccordionModule} from 'primeng/accordion';
 
 
 @NgModule({
@@ -41,7 +44,8 @@ import { OrderComponent } from './ourservice/order/order.component';
     OurserviceComponent,
     BlogComponent,
     ContactComponent,
-    OrderComponent
+    OrderComponent,
+    ContactformComponent
     
   ],
   imports: [
@@ -52,9 +56,14 @@ import { OrderComponent } from './ourservice/order/order.component';
     HttpModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA7V3DmACVaf_dfuwOTkRpdQKIxPO4l_8Y'
+    }),
+    AccordionModule
   ],
+    
+
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]

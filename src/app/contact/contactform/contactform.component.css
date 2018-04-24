@@ -1,0 +1,26 @@
+.contact-icons>li{
+    list-style-type: none; 
+    color: white;  
+    display: inline;
+}
+.contact-icons li i{
+float: left;
+clear: both;
+}
+.contact {
+    background-color: royalblue;
+    margin-right: 30px;
+    margin-top: 80px;
+}
+h3{
+    color: white;
+}
+.text-center>li{
+    margin-left: 20px;
+}
+.ourcontact{
+    text-align: center;
+    background-color: rgb(247, 243, 243);
+    width:auto;
+    height: 100px;
+}

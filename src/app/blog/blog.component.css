@@ -4,3 +4,14 @@ h1{
 h1+p{
     margin-left:20px; 
 }
+.ourblog{
+    text-align: center;
+    background-color: rgb(247, 243, 243);
+    width:auto;
+    height: 100px;
+}
+
+.section-description{
+    margin: 20px 0 30px 30px;
+    text-align: center;
+}
