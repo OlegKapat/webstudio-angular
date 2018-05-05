@@ -1,8 +1,4 @@
-<?php
- 
-header('Content-type: application/json');
- 
-$errors = '';
+errors = '';
  
 if(empty($errors))
 {
@@ -11,9 +7,9 @@ if(empty($errors))
 	$request = json_decode($postdata);
  
 	$from_name = $request->name;
-	$from_email = $request->email;
-	$type = $request->type;
-	$subject=$request->subject
+	$from_mail = $request->mail;
+	$phone = $request->phone;
+	$company=$request->company
  
 	$to_email = $from_email;
  
@@ -33,7 +29,7 @@ if(empty($errors))
 	$headers .= "From: $from_email\n";
 	$headers .= "Reply-To: $from_email";
  
-	mail("bombastik@ukr.net","Name":$from_name,"Email":$email_body,"Type":$type,"Suject":$subject,$email_body,$headers );
+	mail("bombastik@ukr.net","Name":$from_name,"Email":$mail_body,"Phone":$phone,"Company":$company,"Message":$message,$email_body,$headers );
  
 	$response_array['status'] = 'success';
 	$response_array['from'] = $from_email;

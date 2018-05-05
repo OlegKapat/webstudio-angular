@@ -1,23 +1,23 @@
 <div class="container" *ngIf="visible">
-  <h1>Fill form</h1>
-  <form (ngSubmit)="onSubmit" [formGroup]="userForm" novalidate>
+  <h1>Fill in the form</h1>
+  <form (ngSubmit)="sendMail(message)" [formGroup]="userForm" action="mail.php" method="POST" novalidate>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" formControlName='name' id="name" required>
+      <input type="text" class="form-control" name="name" formControlName='name' id="name" required>
       <div *ngIf="formError.name" class="alert alert-danger">
 				{{ formError.name }}
 			</div>
     </div>
     <div class="form-group">
     <label for="email">Email</label>
-    <input type="text" id="email" class="form-control" formControlName='email' required> 
+    <input type="text" id="email" class="form-control" name="email" formControlName='email' required> 
     <div *ngIf="formError.email" class="alert alert-danger">
       {{ formError.email }}
     </div>
      </div>
      <div class="form-group">
      <label for="object">Subject</label>
-     <select id="object" class="form-control" formControlName='subjects' required>
+     <select id="object" class="form-control" formControlName='subjects' name="subject" required>
      <option *ngFor="let r of subjects" [value]="r">{{r}}</option>
      </select>
      <div *ngIf="formError.subject" class="alert alert-danger">
@@ -26,14 +26,14 @@
       </div>
       <div class="form-group">
       <label for="type">Type</label>
-      <select id="type" class="form-control" formControlName='types' required>
+      <select id="type" class="form-control" formControlName='types' name="type" required>
       <option *ngFor="let c of types" [value]='c'>{{c}}</option>
       </select>
       <div *ngIf="formError.types" class="alert alert-danger">
         {{ formError.types }}
       </div>
       </div>
-      <button type="submit" class="btn btn-default" [disabled]="!userForm.valid">Submit</button>
+      <button type="submit" class="btn btn-default" [disabled]="!userForm.valid">Send</button>
   </form>
 
 </div>

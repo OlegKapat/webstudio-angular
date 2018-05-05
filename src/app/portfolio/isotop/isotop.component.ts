@@ -14,13 +14,13 @@ export class IsotopComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var $grid = $('.grid').isotope();
+    //var $grid = $('.grid').isotope();
    
   }
   sortButtonClickHtml() {
     const grid = document.querySelector('.grid');
     const iso = new Isotope(grid, {
-        filter: '.html'
+      filter: '.html'
       }
     );
   }
@@ -28,7 +28,7 @@ export class IsotopComponent implements OnInit {
 
     const grid = document.querySelector('.grid');
     const iso = new Isotope(grid, {
-        filter: '.angular'
+      filter: '.angular'
       }
     );
   }
@@ -36,7 +36,7 @@ export class IsotopComponent implements OnInit {
 
     const grid = document.querySelector('.grid');
     const iso = new Isotope(grid, {
-        filter: '.joomla'
+      filter: '.joomla'
       }
     );
   }

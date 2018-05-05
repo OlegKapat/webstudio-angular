@@ -1,6 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {FormGroup,FormControl,Validators,FormBuilder} from '@angular/forms';
-import {User} from '../../user';
+import {FillForm} from '../../fillform';
+import {SendmailService} from '../../shared/sendmail.service';
 
 @Component({
   selector: 'app-order',
@@ -9,14 +10,14 @@ import {User} from '../../user';
 })
 export class OrderComponent implements OnInit {
   userForm:FormGroup;
-  user:User=new User();
+  user:FillForm=new FillForm();
   visible:boolean=false;
-  
+  message:FillForm={};
 
   subjects:string[]=["HTML5,CSS3","Angular 2/4","Joomla"];
   types:string[]=["Card site","Blog","Internet shop","Landing page"];
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private service:SendmailService) { }
   contactForm=new FormGroup({
     name:new FormControl(),
     email:new FormControl(),
@@ -50,7 +51,7 @@ export class OrderComponent implements OnInit {
   buildForm(){
     this.userForm=this.fb.group({
       "name":[this.user.Name,[Validators.required, Validators.minLength(4),Validators.maxLength(15)]],
-      "email":[this.user.Password,[Validators.required,Validators.minLength(6),Validators.pattern("[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}")]],
+      "email":[this.user.Email,[Validators.required,Validators.pattern("[^ @]*@[^ @]*")]],
       "subjects":[this.user.Object,[Validators.required]],
       "types":[this.user.Type,[Validators.required]]
     })
@@ -85,5 +86,9 @@ export class OrderComponent implements OnInit {
   }
   change(){
     this.visible=true;
+  }
+  sendMail(message:FillForm){
+    this.service.sendEmail(message).subscribe(res=>{console.log("Sending success",res);}
+    ,error=>{console.log("Sending wrong",error)}),this.userForm.reset();
   }
 }

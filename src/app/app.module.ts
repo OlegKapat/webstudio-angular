@@ -25,6 +25,9 @@ import { OrderComponent } from './ourservice/order/order.component';
 import { AgmCoreModule } from '@agm/core';
 import { ContactformComponent } from './contact/contactform/contactform.component';
 import {AccordionModule} from 'primeng/accordion';
+import {SendmailService} from './shared/sendmail.service';
+import {SendMessageService } from './shared/send-message.service';
+
 
 
 @NgModule({
@@ -47,6 +50,7 @@ import {AccordionModule} from 'primeng/accordion';
     OrderComponent,
     ContactformComponent
     
+    
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,7 @@ import {AccordionModule} from 'primeng/accordion';
   ],
     
 
-  providers: [],
+  providers: [SendmailService,SendMessageService ],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

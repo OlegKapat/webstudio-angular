@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
-import {User} from '../user';
+import {FillForm} from '../fillform';
 
 interface Login {
   login: string;
@@ -15,7 +15,7 @@ interface Login {
 })
 export class RegistrationComponent implements OnInit {
   loginForm: FormGroup;
-  user: User = new User();
+  user: FillForm = new FillForm();
   constructor(public build: FormBuilder) { }
 
   formErrors = {
@@ -46,7 +46,7 @@ validationMessages = {
           Validators.minLength(4),
           Validators.maxLength(15)
         ]],
-        'password': [this.user.Password, [
+        'password': [this.user.Email, [
           Validators.required,
           Validators.pattern('[a-zA-Z0-9._%-]')
         ]],
