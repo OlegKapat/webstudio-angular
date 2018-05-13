@@ -57,6 +57,7 @@
   }
   .col-lg-12{
     background-color: rgba(243, 36, 36,0.3);
+   position: relative;
     
   }
   .col-lg-12 h4{
@@ -73,16 +74,23 @@
     font-weight: 300;
     text-align: center;
   }
-  @media screen and (max-width: 699px) and (min-width: 480px) {
-    .hamburger{
+  @media screen and (max-width: 699px) {
+    .hamburger:after{
       margin-left: auto;
     }
     .hamburger:hover{
       transform: rotate(90deg);
       transition: all 0.5s linear;
     }
+    .title{
+     visibility: collapse;
+    }
+    .button{
+      align-content: center;
+      margin-right: 10px;
+    }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width:600px){
   .hamburger{
     margin-left: auto;
     

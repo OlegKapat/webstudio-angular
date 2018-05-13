@@ -1,7 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 import {FormBuilder,FormControl,FormGroup,Validators} from '@angular/forms';
 import {SendMessageService} from '../../shared/send-message.service';
-import {SendMessage} from '../../sendmessage';
+import {Send} from '../../send';
 
 @Component({
   selector: 'app-contactform',
@@ -9,13 +9,17 @@ import {SendMessage} from '../../sendmessage';
   styleUrls: ['./contactform.component.css']
 })
 export class ContactformComponent implements OnInit {
+  textview: Send=new Send();
+  mymessage: Send={};
+
   myForm=new FormGroup({
   name:new FormControl(),
   mail:new FormControl(),
   phone:new FormControl(),
   company:new FormControl(),
-  text:new FormControl()
+  message:new FormControl()
   })
+  
 
   constructor(private sendmessageservice:SendMessageService, private fb:FormBuilder) { }
 
@@ -24,11 +28,11 @@ export class ContactformComponent implements OnInit {
   }
   buildForm(){
     this.myForm=this.fb.group({
-      "name":[this.user.name,[Validators.required]],
-      "mail":[this.user.mail,[Validators.required]],
-      "subjects":[this.user.phone,[Validators.required]],
-      "types":[this.user.company,[Validators.required]],
-      "text":[this.user.message,[Validators.required]]
+      "name":[this.textview.Name,[Validators.required]],
+      "mail":[this.textview.Mail,[Validators.required]],
+      "phone":[this.textview.Phone,[Validators.required]],
+      "company":[this.textview.Company,[Validators.required]],
+      "message":[this.textview.Message,[Validators.required]]
     })
     this.myForm.valueChanges.subscribe(data=>this.onValueChange(data));
     this.onValueChange();
@@ -43,8 +47,12 @@ export class ContactformComponent implements OnInit {
 
     }
   }
-  sendForm(message:SendMessage){
-    this.sendmessageservice.sendForm(message).subscribe(res=>{console.log("Sending success",res);}
+  sendfillForm(mymessage:Send){
+    this.sendmessageservice.sendForm(mymessage).subscribe(res=>{console.log("Sending success",res);}
     ,error=>{console.log("Sending wrong",error)}),this.myForm.reset();
+  }
+  onSubmit(){
+    console.log("submitted");
+    console.log(this.myForm.value);
   }
 }

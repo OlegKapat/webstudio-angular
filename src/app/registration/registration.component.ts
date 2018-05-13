@@ -71,7 +71,7 @@ validationMessages = {
         }
       }
      }
-     onSubmit() {}
+     onSubmit(data:any) {}
   }
 
 

@@ -22,7 +22,7 @@
 
                             <br>
 
-                            <form method="POST" action="form.php" (ngSubmit)="sendForm(message)" [formGroup]="myForm">
+                            <form method="POST" action="form.php" (ngSubmit)="sendfillForm(mymessage)" [formGroup]="myForm">
                                 <!--Grid row-->
                                 <div class="row">
 
@@ -86,7 +86,7 @@
                                     <div class="col-md-12">
 
                                         <div class="md-form">
-                                            <textarea mdbActive  type="text" id="form-contact-message" class="md-textarea" name="text"></textarea>
+                                            <textarea mdbActive  type="text" id="form-contact-message" class="md-textarea" name="message"></textarea>
                                             <label for="form-contact-message">Your message</label>
                                             <button  type="submit" class="btn-floating btn-lg blue waves-light" role="button" mdbRippleRadius><i class="fa fa-send-o"></i></button>
                                         </div>
