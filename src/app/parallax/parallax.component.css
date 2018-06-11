@@ -93,10 +93,22 @@
      text-align: center;
      color: #82B1FF !important;
  }
- 
+ .icon{
+   margin-left: 20px;
+ }
  .rewards{
      display: inline;
      clear: both;
      
  }
- 
+ @media  screen and (max-width: 510px) {
+  .mb-2{
+      font-size: 40px;
+  }
+  .section-description{
+      font-size: 20px;
+  }
+  .mb-3{
+    font-size: 16px;
+  }
+}

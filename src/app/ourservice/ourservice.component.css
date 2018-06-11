@@ -1,7 +1,12 @@
-li{
+.striped li {
 list-style-type: none;
 text-align: left;
-margin-left: 110px;
+margin-left: 20px;
+
+}
+.striped li p{
+    text-align: left;
+    margin-left: 100px;
 }
 h1,p{
     margin-left: 10px;
@@ -17,4 +22,22 @@ h1,p{
 }
 .section-description{
     margin: 20px 0 30px 30px;
+}
+@media  screen and (max-width: 510px) {
+    .mb-2{
+        font-size: 40px;
+    }
+    .section-description{
+        font-size: 20px;
+        text-align: center;
+    }
+    li{
+        margin-left: 10%;
+    }
+}
+@media  screen and (min-width: 960px) {
+   
+     li {
+        margin-left: 100px;
+    }
 }

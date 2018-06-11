@@ -82,8 +82,13 @@
       transform: rotate(90deg);
       transition: all 0.5s linear;
     }
-    .title{
-     visibility: collapse;
+    .title h4{
+      font-size: 30px;
+      text-align: center;
+      margin-left: 40%;
+    }
+    .title h6{
+      visibility: collapse;
     }
     .button{
       align-content: center;
@@ -104,6 +109,7 @@
   }
   .col-lg-12 h6{
     font-size: 16px;
+    
   }
 }
 .col-lg-12{

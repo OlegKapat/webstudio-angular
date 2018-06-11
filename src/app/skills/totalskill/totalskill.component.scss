@@ -77,3 +77,12 @@ img{
     border-bottom: 1px solid #4f4c4c;
     padding: 5px;
 }
+@media only screen and (max-width: 980px) {
+    .mb-2{
+        font-size: 30px !important;
+        
+    }
+    .ourclient{
+        margin-left: 10%;
+    }
+}

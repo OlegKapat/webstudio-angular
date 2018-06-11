@@ -48,8 +48,11 @@
   }
  li a.active{
     border-bottom: 5px solid white;
-    
-
   }
-  
+  @media  screen and (max-width: 510px) {
+   
+    li{
+      line-height:50px;
+    }
+}
   
